@@ -1,0 +1,65 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+  border: 0;
+  font-size: 100%;
+  font-family: "Proxima Nova Rg", sans-serif;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container
+{
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url('../media/images/ian-dooley-3NCA3tbaE5I-unsplash.jpg');
+  /* NOTE: <span>Photo by <a href="https://unsplash.com/@sadswim?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">ian dooley</a> on <a href="https://unsplash.com/s/photos/mapping?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.logo-container
+{
+  width: auto;
+  margin: 0 auto;
+  overflow: hidden
+}
+
+.logo
+{
+  width: 400px;
+  margin: 0 auto;
+}
+
+.logo img
+{
+  width: 100%;
+}
+
+.login-button
+{
+  width: 160px;
+  height: 40px;
+  min-width: 54px;
+  margin: 0 auto;
+  background-color: #0a7373;
+  border: 1px solid #0a7373;
+  border-radius: 4px;
+  color: #5F6368;
+  font-family: arial,sans-serif;
+  font-size: 18px;
+  padding: 0 16px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+a
+{
+  text-decoration: none;
+}
