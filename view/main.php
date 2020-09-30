@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Look</title>
     <link rel="stylesheet" href="css/cmplus.css">
+    <link rel="stylesheet" href="css/dialog.css">
   </head>
   <body>
     <div class="main-container">
@@ -14,9 +15,13 @@
       </div>
       <div class="connection-action">
         <div class="login-button">
-          <a href="#"><p>Se Connecter</p></a>
+          <a href="#connection-modal" class="modal-link"><p>Se Connecter</p></a>
         </div>
       </div>
     </div>
+    <?php
+      include('layout/modal/connection-modal.php');
+    ?>
+    <script type="text/javascript" src="js/cmplus.js"></script>
   </body>
 </html>

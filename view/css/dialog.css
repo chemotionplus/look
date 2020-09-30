@@ -1,0 +1,631 @@
+/*----------------------------------------------
+Author : @chemotionplus
+Website: www.chemotionplus.com
+License: Commons Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
+------------------------------------------------*/
+.prod-container
+{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	border: 6.18px solid white;
+	box-sizing: border-box;
+/* 	background: red */
+}
+
+/* ------------------------------------------------ */
+
+.table-container
+{
+	width:100%;
+/* 	margin: auto; */
+	margin: 6.618px;
+	height: auto;
+	overflow: auto;
+}
+
+.stock-prod-container
+{
+	width:100%;
+/* 	margin: auto; */
+	margin: 6.618px;
+	height: auto;
+	overflow: auto;
+}
+
+.table-container table, .stock-prod-container table, .checkout-container table
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-container th, .table-container td, .stock-prod-container th, .stock-prod-container td
+{
+  text-align: left;
+  padding: 8px;
+}
+
+.table-container tr, .stock-prod-container tr, .checkout-container tr
+{
+	background-color: rgba(255,255,255,0.5);
+}
+
+.table-container tr:nth-child(even){background-color: #f2f2f2}
+.stock-prod-container tr:nth-child(even){background-color: #f2f2f2}
+.checkout-container tr:nth-child(even){background-color: #f2f2f2}
+
+th
+{
+/*   background-color: #2C3A47; */
+/*   width: 100%; */
+	background-color: #2C3E50;
+  color: white;
+	height: 40px;
+  max-height: 40px;
+	padding: 5px;
+  vertical-align: middle;
+}
+
+form table
+{
+	border: none;
+	background-color: rgba(255,255,255,0.5);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+form table td, form table tr
+{
+	border: none;
+  height: 25px;
+	margin: 5px;
+	font-weight: bold;
+	font-family: 'Proxima Nova B', sans-serif;
+	font-size: 14px;
+	color: #2C3A47;
+	box-sizing: border-box;
+}
+
+form table input
+{
+	border-radius: 5px;
+	border: none;
+	width: auto;
+	height: 20px;
+	padding: 5px;
+}
+
+table a
+{
+  text-decoration: none;
+}
+
+table a.delete
+{
+  color: firebrick;
+}
+
+table a.edit
+{
+  color: #73B97C;
+  margin: 6.18px;
+}
+
+/* ------------------------------------------------ */
+
+.action-container
+{
+	width:20%;
+/* 	margin: auto; */
+	margin: 6.618px;
+	overflow: auto;
+	background-color: #2C3E50;
+	box-sizing: border-box;
+}
+
+.action-container.stock
+{
+/*   position: fixed; */
+	width:20%;
+/* 	margin: auto; */
+	margin: 6.618px;
+	overflow: auto;
+	background-color: #2C3E50;
+	box-sizing: border-box;
+}
+
+.action-container nav ul
+{
+	width: auto;
+	height: auto;
+	padding: 6.18px;
+	text-decoration: none;
+	list-style: none;
+	list-style-type: none;
+	box-sizing: border-box;
+}
+
+.action-container nav ul li
+{
+	background-color: #3498DB;
+/* 	padding: 6.18px; */
+	margin: 6.18px;
+	text-align: center;
+	cursor: pointer;
+  overflow: hidden;
+}
+
+.action-container nav ul li:hover
+{
+	background-color: #73B97C;
+}
+
+.action-container nav ul li a
+{
+  display: block;
+  width: auto;
+  padding: 9.618px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Proxima Nova B', sans-serif;
+	font-size: 12.618px;
+	color: white;
+}
+
+/* ------------------------------------------------ */
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+/*   display: none; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  outline: 0;
+	box-sizing: border-box;
+	background-color: rgba(44, 62, 80, 0.8);
+	animation: fadeIn .5s both;
+}
+
+.modal[aria-hidden='true']
+{
+	animation-name: fadeOut;
+}
+
+.modal[aria-hidden='true'] .modal-dialog
+{
+	animation-name: slideToTop;
+}
+
+.modal-dialog {
+  position: relative;
+  width: 350px;
+	max-width: calc(100vw - 20px);
+  max-height: 600px;
+  margin: 6.18px auto;
+  pointer-events: none;
+	box-sizing: border-box;
+  /* background-color: red;*/
+	animation: slideFromTop .3s both;
+}
+
+.modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  overflow: hidden;
+  margin-top: calc(100vh - 323px * 2);
+}
+
+.modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modal-header .close {
+  margin: -10px -10px -1px auto;
+  cursor: pointer;
+}
+
+.close
+{
+  font-weight: 700;
+  border: 0;
+  background-color: transparent;
+  font-size: 26.18px;
+}
+
+.close:hover
+{
+  color: red;
+  font-size: 28.618px;
+}
+
+.modal-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Proxima Nova B', sans-serif;
+  font-size: 16px;
+  color: #085159;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.modal-body {
+  position: relative;
+  display: block;
+  padding: 0 16px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.modal-body.delete
+{
+  height: auto;
+}
+
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 16px 0;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+
+.modal-footer > * {
+  margin: 0.25rem;
+}
+
+/* .modal-dialog
+{
+    max-width: 500px;
+    margin: 1.75rem auto;
+} */
+
+@keyframes fadeIn
+{
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes fadeOut
+{
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@keyframes slideFromTop
+{
+	from { transform: translateY(-50px); }
+	to { transform: translateY(36.18px); }
+}
+
+@keyframes slideToTop
+{
+	from { transform: translateY(36.18px); }
+	to { transform: translateY(-50px); }
+}
+
+/* ------------------------------------------------ */
+
+.modal form
+{
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.modal .lbl-in-container
+{
+    margin: 20px 0;
+  background-color: transparent;
+  box-sizing: border-box;
+/*   overflow: hidden */
+}
+
+.lbl-content
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: auto;
+    min-width: 200px;
+    height: 30px;
+    text-align: left;
+    background-color: transparent;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Bl', sans-serif
+}
+
+.modal.in-content
+{
+  box-sizing: border-box
+}
+
+.lbl-content label
+{
+    color:  #085159;
+    vertical-align: baseline;
+    vertical-align: -moz-middle-with-baseline;
+}
+
+.modal .in-content input.in
+{
+  color: #0a7373;
+  width: 100%;
+    height:36.18px;
+  max-height: 36.18px;
+    -moz-border-radius: 4.618px;
+    border-radius: 4.618px;
+    border: 2px solid #d9d9d9;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+.btn
+{
+  width: 160px;
+  height: 40px;
+  margin: 0 auto;
+  text-decoration: none;
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase;
+/*   font-weight: 700; */
+  font-family: 'Proxima Nova B', sans-serif;
+  color: #5F6368;
+  cursor: pointer;
+}
+
+.btn.btn-success
+{
+  background-color: #0a7373;
+  color: white;
+  border-radius: 4.618px;
+}
+
+.btn.btn-success:hover
+{
+  background-color:  #085159;
+}
+
+.btn.btn-danger
+{
+  background-color: #B50D00;
+  color: white;
+  border-radius: 4.618px;
+}
+
+/* ------------------------------------------------ */
+
+.sale-container
+{
+  display: flex;
+	width: 100%;
+	height: 100%;
+	border: 6.18px solid white;
+	box-sizing: border-box;
+/* 	background: red; */
+  overflow: auto
+}
+
+.stock-prod-container button
+{
+  color: #73B97C;
+  border: none;
+  background-color: transparent;
+  font-size: 16.18px;
+  cursor: pointer;
+}
+
+.checkout-container
+{
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  min-width: 450px;
+	margin: 6.618px;
+/*   background-color: blue; */
+  overflow: auto;
+}
+
+.checkout-container table
+{
+  border: 2.618px solid #2C3E50;
+}
+
+.checkout-container table.chk-header
+{
+  border-bottom: 1.309px solid #73B97C;
+}
+
+.checkout-container table.chk-footer
+{
+  border-top: 1.309px solid #73B97C;
+}
+
+.checkout-container form.chk
+{
+  width: 100%;
+  height: auto;
+/*   background-color: green; */
+  overflow: auto;
+}
+
+table.chk-footer, table.chk-header
+{
+  border-radius: 0;
+}
+
+.chk-header
+{
+  display: block;
+  width: 100%;
+  max-width: 450px;
+/*   min-width: 450px; */
+  max-height: 300px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.tbody-checkout
+{
+  width: auto;
+  overflow: auto;
+/*   background-color: firebrick; */
+  box-sizing: border-box;
+}
+
+.chk-footer
+{
+  width: 100%;
+}
+
+.checkout-container td, .checkout-container th
+{
+  text-align: left;
+  padding: 8px;
+}
+
+.checkout-container th
+{
+  width: 100%;
+}
+
+.checkout-container .tbody-checkout td
+{
+  height: 30px;
+  max-height: 30px;
+  padding: 0;
+}
+
+.checkout-container table .td-name
+{
+  text-align: left;
+/*   width: 150px; */
+  max-width: 180px;
+  min-width: 51.618%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+/*   background-color: firebrick */
+}
+
+.checkout-container .quantity
+{
+/*   float: right; */
+  display: block;
+  width: 62px;
+/*   height: 30px; */
+/*   background-color: yellow; */
+  overflow: auto;
+}
+
+.checkout-container table input.qte
+{
+  width: 25px;
+  text-align: center;
+  background-color: #73B97C;
+  font-family: 'Proxima Nova B', sans-serif;
+  margin: 0 6.18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.checkout-container a.plus, .checkout-container a.moins, .checkout-container .del
+{
+  font-family: 'Proxima Nova B', sans-serif;
+  font-size: 18px;
+  color: #2C3A47;
+}
+
+.checkout-container .del
+{
+  margin: 0 6.18px;
+  color: red;
+}
+
+.checkout-container input.tot
+{
+/*   width: 86%; */
+  max-width: 75px;
+  min-width: 75px;
+/*   float: right; */
+  text-align: inherit;
+  font-family: 'Proxima Nova B', sans-serif;
+  margin: 0 6.18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.checkout-container input.in-content
+{
+  width: 93%;
+/*   margin: 6.18px; */
+}
+
+
+.action-container.sale-action
+{
+  display: block;
+  width: 98%;
+/* 	margin: auto; */
+	margin: 6.618px;
+	overflow: auto;
+/* 	background-color: #2C3E50; */
+	box-sizing: border-box;
+}
+
+.action-container.sale-action ul
+{
+  display: flex;
+  background-color: white;
+}
+
+.action-container.sale-action li
+{
+  min-width: 125px;
+}
+
+.action-container.sale-action #annuler
+{
+  background-color: firebrick;
+}
+
+.subtotal, .total, .change, .item_count
+{
+  background-color: #e3e3e3
+}
+
+.item_count
+{
+  background-color: #73B97C;
+}
