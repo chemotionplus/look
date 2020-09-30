@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./media/images/look-logo.png" />
+  <img src="./view/media/images/look-logo.png" />
 </p>
 <p align="center">
   <a href="#contributors">
